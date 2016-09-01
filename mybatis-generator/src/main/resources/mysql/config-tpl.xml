@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <context id="context_tml">
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="false"/>
+        </commentGenerator>
+
+        <jdbcConnection userId="[user]" password="[password]"
+                        driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="[url]"/>
+
+        <!-- 持久化对象包名和路径 -->
+        <javaModelGenerator targetPackage="[entity.package]" targetProject="[desktop]"/>
+        <!-- xml dao 包名和路径-->
+        <sqlMapGenerator targetPackage="[mapper.package]" targetProject="[desktop]"/>
+        <!-- java dao 包名和路径-->
+        <javaClientGenerator targetPackage="[mapper.package]" type="XMLMAPPER" targetProject="[desktop]"/>
+
+        <!-- 下面是数据库对应的数据表 -->
+        <table tableName=""/>
+
+    </context>
+</generatorConfiguration>
